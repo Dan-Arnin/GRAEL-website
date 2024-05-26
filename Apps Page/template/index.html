@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Breeze Admin</title>
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <style>
+      #footer .content p {
+        margin-bottom: 0;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      .container-scroller, .page-body-wrapper, .main-panel {
+        height: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-scroller">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <
+        <div class="center d-flex align-items-center">
+          <img src="assets/images/logowithname.png" alt="logo" width="200px"/>
+        </div>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" onclick="changeFrameSrc('https://30days.streamlit.app/?embed=true')">
+              <i class="mdi mdi-home menu-icon"></i>
+              <span class="menu-title" >Summarization</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              <span class="menu-title" onclick="changeFrameSrc('https://brainzy.streamlit.app/?embed=true')">Mindmap generator</span>
+              <i class="menu-arrow"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="mdi mdi-contacts menu-icon"></i>
+              <span class="menu-title"onclick="changeFrameSrc('https://mathgpt.streamlit.app/?embed=true')">Math Solver</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+              <span class="menu-title" onclick="changeFrameSrc('https://healthcare-mp.streamlit.app/?embed=true')">Healthcare Assistant</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="mdi mdi-chart-bar menu-icon"></i>
+              <span class="menu-title" onclick="changeFrameSrc('https://image-caption.streamlit.app/?embed=true')">Caption Images</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">
+              <i class="mdi mdi-table-large menu-icon"></i>
+              <span class="menu-title" onclick="changeFrameSrc('https://godly1234.streamlit.app/?embed=true')">Visual Chatbot</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <span class="nav-link">
+              <span class="menu-title" onclick="changeFrameSrc('https://d3graph.streamlit.app/?embed=true')">Graph Visualizer</span>
+            </span>
+          </li>
+        
+        </ul>
+      </nav>
+      <div class="container-fluid page-body-wrapper">
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close mdi mdi-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-default-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div> Default
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div> Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles light"></div>
+            <div class="tiles dark"></div>
+          </div>
+        </div>
+        <nav class="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
+          <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
+            <a class="navbar-brand brand-logo-mini align-self-center d-lg-none" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
+              <i class="mdi mdi-menu"></i>
+            </button>
+           
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+              <span class="mdi mdi-menu"></span>
+            </button>
+          </div>
+        </nav>
+        <div class="main-panel">
+          <div class="content-wrapper" style="height: 100%">
+            <iframe id="myiframe" src="https://30days.streamlit.app/?embed=true"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendors/flot/jquery.flot.js"></script>
+    <script src="assets/vendors/flot/jquery.flot.resize.js"></script>
+    <script src="assets/vendors/flot/jquery.flot.categories.js"></script>
+    <script src="assets/vendors/flot/jquery.flot.fillbetween.js"></script>
+    <script src="assets/vendors/flot/jquery.flot.stack.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/misc.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script>
+      function changeFrameSrc(src) {
+        document.getElementById('myiframe').src = src;
+      }
+    </script>
+  </body>
+</html>
